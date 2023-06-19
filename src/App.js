@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import "./App.css";
 
 function App() {
+  const [text, setText] = useState("");
+  const [color, setColor] = useState("black");
+  const [countChar, setCountChar] = useState(0);
+
+  const handleText = (e) => {
+    let { value } = e.target;
+    setText(value);
+  };
+
+  const handleColor = (e) => {
+    const { value } = e.target;
+    setColor(value);
+  };
+
+  useEffect(() => {
+    setCountChar(text.length);
+  }, [text]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="container">
+        <select name="" id="" value={color} onChange={handleColor}>
+          <option value="black">Black</option>
+          <option value="green">Green</option>
+          <option value="orange">Orange</option>
+          <option value="red">Red</option>
+        </select>
+
+        <textarea
+          value={text}
+          onChange={handleText}
+          style={{ color: `${color}` }}
+        ></textarea>
+        <p>Total Character - {countChar}</p>
+      </div>
+    </>
   );
 }
 
