@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/SKIDS_Health_Assig/static/css/main.04f08425.css",
+    "main.js": "/SKIDS_Health_Assig/static/js/main.be8c3565.js",
+    "static/media/formImage.png": "/SKIDS_Health_Assig/static/media/formImage.2da3d69cf31e6f3bf09e.png",
+    "index.html": "/SKIDS_Health_Assig/index.html",
+    "main.04f08425.css.map": "/SKIDS_Health_Assig/static/css/main.04f08425.css.map",
+    "main.be8c3565.js.map": "/SKIDS_Health_Assig/static/js/main.be8c3565.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04f08425.css",
+    "static/js/main.be8c3565.js"
+  ]
+}
