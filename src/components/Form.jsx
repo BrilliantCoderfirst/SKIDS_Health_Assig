@@ -34,7 +34,7 @@ const Form = () => {
       userData.name === "" ||
       userData.email === "" ||
       userData.number === "" ||
-      userData.photo === ""
+      userData.photo.length === 0
     ) {
       alert("Please Enter Data");
     } else {
