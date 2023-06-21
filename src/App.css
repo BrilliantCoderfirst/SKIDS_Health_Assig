@@ -1,29 +1,508 @@
+@import url(https://fonts.googleapis.com/css?family=Exo+2:300,400,700);
+
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Exo 2", sans-serif;
+}
+body {
+  background-color: rgb(46 43 67);
 }
 
-.container {
+/* Navbar Component Style */
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  box-shadow: 0px 2px 10px rgb(153, 152, 152);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #43395adb;
+}
+.navbar a {
+  text-decoration: none;
+}
+.navbar h1 {
+  font-size: 30px;
+  color: white;
+}
+
+/* Home Page Style */
+
+.homeContainer {
+  width: 100%;
+  background-color: rgb(46 43 67);
+}
+.homeContainer .addUser {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+}
+.homeContainer .addUser a {
+  text-decoration: none;
+}
+.homeContainer .addUser .btn {
+  width: 220px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 25px;
+  border-radius: 5px;
+  background: linear-gradient(to left, #c12d39, #fa68ce);
+  cursor: pointer;
+  box-shadow: 0 10px 15px rgba(202, 63, 128, 0.53);
+  padding: 0px 20px;
+}
+.homeContainer .addUser .btn svg {
+  font-size: 30px;
+  color: white;
+}
+.homeContainer .addUser .btn button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 20px;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+}
+.homeContainer .allCards {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 60px;
+}
+.homeContainer .allCards .heading_card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 60px;
+}
+.homeContainer .allCards .heading_card .blank {
+  width: 305px;
+}
+.homeContainer .allCards .heading_card h1 {
+  font-size: 40px;
+  color: white;
+}
+.homeContainer .allCards .heading_card .search {
+  width: 300px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid rgb(90, 90, 101);
+  border-radius: 5px;
+}
+.homeContainer .allCards .heading_card input {
+  width: 270px;
+  height: 28px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  font-size: 18px;
+  background-color: transparent;
+  color: white;
+}
+.homeContainer .allCards .heading_card svg {
+  color: rgb(165, 163, 163);
+}
+.homeContainer .allCards .cards {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 50px 50px;
+}
+.homeContainer .allCards .cards .messageShow {
+  margin-top: 100px;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+.homeContainer .allCards .cards .messageShow .center {
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 904px) {
+  .homeContainer .allCards .heading_card {
+    height: 153px;
+    flex-direction: column;
+  }
+  .homeContainer .allCards .heading_card .blank {
+    display: none;
+  }
+  .homeContainer .allCards .heading_card .search {
+    width: 380px;
+  }
+  .homeContainer .allCards .heading_card input {
+    width: 350px;
+  }
+}
+@media (max-width: 400px) {
+  .homeContainer .allCards .heading_card .search {
+    width: 250px;
+  }
+  .homeContainer .allCards .heading_card input {
+    width: 200px;
+  }
+}
+
+/* Form Component Style */
+
+.formContainer {
+  width: 100%;
+  height: 936px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(46 43 67);
+}
+.formContainer .form {
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.formContainer .form .leftFormPart,
+.formContainer .form .rightFormPart {
+  width: 50%;
+}
+.formContainer .form .leftFormPart {
+  width: 50%;
+  height: 513px;
+  padding-left: 30px;
+  box-shadow: 0px 0px 10px rgb(159, 158, 158);
+  border-radius: 10px;
+  background-color: #373c51;
+}
+.formContainer .form .leftFormPart h1 {
+  font-size: 35px;
+  padding-top: 20px;
+  color: rgb(50, 50, 76);
+  color: white;
+  margin-top: 20px;
+}
+.formContainer .form .leftFormPart form {
+  margin-top: 40px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.formContainer .form .leftFormPart .formInput {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid rgb(127, 127, 138);
+  width: 413px;
+}
+.formContainer .form .leftFormPart .formInput svg {
+  font-size: 25px;
+  color: white;
+}
+.formContainer .form .leftFormPart .formInput input {
+  width: 450px;
+  height: 50px;
+  font-size: 20px;
+  padding-left: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #373c51 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.formContainer .form .leftFormPart .photoInput {
+  border: none;
+}
+.formContainer .form .leftFormPart .photoInput input {
+  height: 0px;
+  height: 30px;
+  margin-top: 20px;
+}
+.formContainer .form .leftFormPart .btn {
+  margin-top: 60px;
+}
+.formContainer .form .leftFormPart .btn button {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(to left, #2d77c1, #68fac2);
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 0 5px 15px rgba(110, 221, 235, 0.53);
+  font-size: 25px;
+  font-weight: 800;
+}
+.formContainer .form .rightFormPart img {
+  -webkit-animation: mover 2s infinite alternate;
+  animation: mover 2s infinite alternate;
+}
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+
+@media (max-width: 992px) {
+  .formContainer .form {
+    width: 55%;
+  }
+  .formContainer .form .leftFormPart {
+    width: 100%;
+  }
+  .formContainer .form .leftFormPart .formInput {
+    width: 46vw;
+  }
+  .formContainer .form .rightFormPart {
+    display: none;
+  }
+}
+@media (max-width: 726px) {
+  .formContainer .form {
+    width: 78%;
+  }
+  .formContainer .form .leftFormPart .formInput {
+    width: 68vw;
+  }
+}
+@media (max-width: 382px) {
+  .formContainer .form {
+    width: 78%;
+  }
+  .formContainer .form .leftFormPart {
+    padding-left: 0px;
+  }
+  .formContainer .form .leftFormPart h1 {
+    text-align: center;
+  }
+  .formContainer .form .leftFormPart .btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 500px;
-    flex-direction: column;
+  }
+  .formContainer .form .leftFormPart .formInput {
+    margin-left: 15px;
+  }
+  .formContainer .form .leftFormPart .formInput input {
+    font-size: 14px;
+  }
+  .formContainer .form .leftFormPart .btn {
+    padding-left: 0px;
+  }
+  .formContainer .form .leftFormPart .btn button {
+    width: 180px;
+    height: 40px;
+    font-size: 18px;
+  }
 }
-.container select {
-    width: 200px;
-    height: 50px;
-    font-size: 20px;
+
+/* Card Component Style */
+
+.card {
+  position: relative;
+  width: 315px;
+  height: 450px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);
+  margin-top: 50px;
+  margin: 33px 33px;
 }
-.container textarea {
-    width: 500px;
-    height: 100px;
-    font-size: 20px;
-    margin-top: 40px;
+.card-header {
+  position: relative;
+  height: 220px;
+  background-size: cover;
+  background-position: top;
 }
-.container p {
-    font-size: 25px;
+.card-header:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgb(5, 85, 134),
+    rgba(181, 181, 181, 0.1)
+  );
+}
+
+.card-header-bar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  width: 100%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+  border: none;
+  overflow: hidden;
+}
+.btn-message {
+  display: inline-block;
+  background: url(https://res.cloudinary.com/dj14cmwoz/image/upload/v1491077483/profile-card/images/message.svg)
+    no-repeat;
+  width: 19.37px;
+  height: 16.99px;
+  margin-right: 10px;
+  margin-top: 10px;
+  float: right;
+}
+.btn-menu {
+  display: inline-block;
+  background: url(https://res.cloudinary.com/dj14cmwoz/image/upload/v1491077483/profile-card/images/menu.svg)
+    no-repeat;
+  width: 19px;
+  height: 12.16px;
+  margin-left: 10px;
+  margin-top: 10px;
+  float: left;
+}
+
+svg .polygon {
+  fill: rgb(46 43 67);
+}
+.card-header-slanted-edge {
+  position: absolute;
+  bottom: -3px;
+  z-index: 1;
+  width: 100%;
+  right: 0;
+  left: 0;
+}
+
+.btn-follow {
+  position: absolute;
+  top: -15px;
+  right: 25px;
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(to left, #2d77c1, #68fac2);
+  border-radius: 100%;
+  box-shadow: 0 10px 15px rgba(110, 221, 235, 0.53);
+}
+
+.btn-follow:after {
+  content: "";
+  position: absolute;
+  background: url(https://res.cloudinary.com/dj14cmwoz/image/upload/v1491077480/profile-card/images/add.svg)
+    no-repeat;
+  width: 17px;
+  height: 17px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-body {
+  text-align: center;
+  padding-left: 10px;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 auto;
+  color: rgb(202, 200, 200);
+}
+
+.job-title {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 5px;
+  color: #919191;
+}
+
+.bio {
+  font-size: 14px;
+  color: #7b7b7b;
+  font-weight: 300;
+  margin: 10px auto;
+  line-height: 20px;
+}
+
+.social-accounts img {
+  width: 15px;
+}
+
+.social-accounts a {
+  margin-left: 10px;
+}
+.social-accounts a:first-child {
+  margin-left: 0;
+}
+.card .btn {
+  width: 300px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+.card .centerBtn {
+  width: 259px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.card .centerBtn button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(to left, #2d77c1, #68fac2);
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 0 5px 15px rgba(110, 221, 235, 0.53);
+}
+
+@media (max-width: 350px) {
+  .card {
+    width: 236px;
+    height: 470px;
+  }
+  .card .btn {
+    width: 236px;
     margin-top: 20px;
+  }
+  .card .centerBtn button {
+    width: 90px;
+    height: 35px;
+  }
 }

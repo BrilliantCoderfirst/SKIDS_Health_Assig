@@ -1,42 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./App.css";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Form from "./components/Form";
+import { Routes, Route } from "react-router-dom";
+import EditUser from "./components/EditUser";
 
 function App() {
-  const [text, setText] = useState("");
-  const [color, setColor] = useState("black");
-  const [countChar, setCountChar] = useState(0);
-
-  const handleText = (e) => {
-    let { value } = e.target;
-    setText(value);
-  };
-
-  const handleColor = (e) => {
-    const { value } = e.target;
-    setColor(value);
-  };
-
-  useEffect(() => {
-    setCountChar(text.length);
-  }, [text]);
-
   return (
     <>
-      <div className="container">
-        <select name="" id="" value={color} onChange={handleColor}>
-          <option value="black">Black</option>
-          <option value="green">Green</option>
-          <option value="orange">Orange</option>
-          <option value="red">Red</option>
-        </select>
-
-        <textarea
-          value={text}
-          onChange={handleText}
-          style={{ color: `${color}` }}
-        ></textarea>
-        <p>Total Character - {countChar}</p>
-      </div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/adduser" element={<Form />} />
+        <Route path="/edituser/:id" element={<EditUser />} />
+      </Routes>
     </>
   );
 }
