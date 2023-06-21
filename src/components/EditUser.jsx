@@ -65,7 +65,7 @@ const EditUser = () => {
             number: "",
             photo: [],
           });
-          navigate("/");
+          navigate("/SKIDS_Health_Assignment/");
         }
       }
     }

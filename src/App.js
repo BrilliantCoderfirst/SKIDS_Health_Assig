@@ -11,7 +11,7 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/SKIDS_Health_Assignment/" element={<Home />} />
         <Route path="/adduser" element={<Form />} />
         <Route path="/edituser/:id" element={<EditUser />} />
       </Routes>
